@@ -1,0 +1,44 @@
+// Fungsi untuk membagi dua angka dengan pengecekan error
+function bagiDuaAngka(a, b) {
+    // Memeriksa apakah input adalah angka
+    if (typeof a !== 'number' || typeof b !== 'number') {
+        console.log("Error: Kedua input harus berupa angka!");
+        return;
+    }
+
+    // Memeriksa apakah pembagi adalah nol
+    if (b === 0) {
+        console.log("Error: Tidak bisa membagi dengan nol!");
+        return;
+    }
+
+    // Melakukan pembagian
+    let hasil = a / b;
+    console.log("Hasil pembagian:", hasil);
+}
+
+// Array untuk demonstrasi push, pop, shift, unshift
+let angkaArray = [1, 2, 3, 4];
+
+// Menggunakan metode push untuk menambahkan elemen di akhir array
+angkaArray.push(5); // Menambahkan 5 ke akhir array
+console.log("Array setelah push:", angkaArray);
+
+// Menggunakan metode pop untuk menghapus elemen terakhir
+let elemenTerakhir = angkaArray.pop(); // Menghapus elemen terakhir (5)
+console.log("Array setelah pop:", angkaArray);
+console.log("Elemen yang di-pop:", elemenTerakhir);
+
+// Menggunakan metode shift untuk menghapus elemen pertama
+let elemenPertama = angkaArray.shift(); // Menghapus elemen pertama (1)
+console.log("Array setelah shift:", angkaArray);
+console.log("Elemen yang di-shift:", elemenPertama);
+
+// Menggunakan metode unshift untuk menambahkan elemen di awal array
+angkaArray.unshift(0); // Menambahkan 0 ke awal array
+console.log("Array setelah unshift:", angkaArray);
+
+// Contoh penggunaan fungsi bagiDuaAngka
+bagiDuaAngka(10, 2); // Pembagian yang valid
+bagiDuaAngka(10, 0); // Pembagian dengan nol
+bagiDuaAngka(10, 'a'); // Input bukan angka
